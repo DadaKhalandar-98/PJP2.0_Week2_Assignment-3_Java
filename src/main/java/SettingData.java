@@ -41,5 +41,33 @@ public class SettingData {
 	}
 	public void setAmountInDollars(Double amountInDollars) {
 		this.amountInDollars = amountInDollars;
+    }
+    public ans()
+    {}
+    public String cal_avg() {
+		
+		
+		double res=0.0;
+		
+		if(currency.toString().contains("INR")) {
+			
+			res= (double)Integer.parseInt(Amount)/66;
+			
+		}else if(currency.toString().contains("GBP")) {
+			res=Integer.parseInt(Amount)/0.67;
+			
+		}else if(currency.toString().contains("SGD")) {
+			
+			res=Integer.parseInt(Amount)/1.5;
+		}else if(currency.toString().contains("HKD")) {
+			
+			 res=(double)Integer.parseInt(Amount)/8;
+		}else {
+		 res=Integer.parseInt(Amount);
+		 }
+		
+		
+		res=Math.round(res*10.0)/10.0;
+		return Double.toString(res) ;
 	}
 }
